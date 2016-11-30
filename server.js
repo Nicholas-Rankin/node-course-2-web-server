@@ -45,13 +45,20 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page',
+    pageTitle: 'About Page'
   });
 });
 
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to fulfill this request.'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Project Page',
+    welcomeMessage: 'Insert Project portfolio here.'
   });
 });
 
